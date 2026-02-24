@@ -26,7 +26,7 @@
     transform: translateY(0px)
 
 .banner-principal__img
-  width: 400px !important        
+  max-width: 400px !important        
 
 ///colores
 .color-fondo
@@ -100,8 +100,6 @@
 .tabs-c__tab--active
   font-weight: bold !important
 
-.tabs-a__tab
-  width: 170px
 
 .margenes2
  display: inline-block
@@ -135,19 +133,8 @@
 .bxsh1
   box-shadow: 5px 13px 15px rgba(0,0,0,0.1)
 
-// pantallas pequeñas
-@media screen and ( max-width: 576px )
-  .mw-sm-350px
-    max-width: 350px
-    margin: 0 auto 1rem
-  
-  img
-    margin-bottom: 1.5rem
-    margin-top: 1.5rem
-
 
 ///tarjetas hover
-
 .crd_hover_txt
   position: relative
   padding: 0!important
@@ -408,3 +395,26 @@
   color: white !important
   background-color: #3D46C2 !important
   
+
+
+// 2026
+figcaption
+  font-weight: normal !important
+.fa-lista
+  li
+    display: flex !important
+    align-items: flex-start
+  li:before
+    position: relative
+    margin-right: 7px
+    font-size: 1.4rem 
+.tabs-a__tab__text
+  white-space: normal
+  overflow-wrap: break-word
+  word-break: break-word
+  hyphens: auto
+  -webkit-hyphens: auto
+  -ms-hyphens: auto
+@media (max-width: $bp-max-xs)
+  .slyder-a__bullets__item
+    margin: 0 8px

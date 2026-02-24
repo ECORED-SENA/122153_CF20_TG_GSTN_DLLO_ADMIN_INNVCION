@@ -7,8 +7,7 @@
       .titulo-principal__numero
         span
           i.fas.fa-info
-      h1 Introducción
-    
+      h1 Introducción  
     
     .row.justify-content-center.align-items-center.mb-4
       .col-lg-11
@@ -24,6 +23,7 @@
     figure
       .video
         <iframe width="560" height="315" src="https://www.youtube.com/embed/d32Qe8UfEsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    figcaption Video. Acciones de mejora basadas en #[em Big data] Introducción
             
     
 </template>
