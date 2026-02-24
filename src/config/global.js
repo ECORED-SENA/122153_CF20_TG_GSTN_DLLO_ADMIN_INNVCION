@@ -1,8 +1,9 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
+    componenteFormativo: 'Acciones de mejora basadas en <i>Big data</i>',
+    descripcionCurso:
+      'Este componente formativo explora cómo deben tratarse los datos para iniciar y mantener un proceso de depuración, con el fin de ser utilizados en la organización, para generar valor a los procesos desde la gestión de datos e información, teniendo en cuenta el uso sistemático de estos y su salvaguarda, y así protegerlos como un activo importante para la empresa.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/banner-princiapal.svg'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
       {
@@ -12,6 +13,10 @@ export default {
       {
         clases: ['banner-principal-decorativo-2'],
         imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-3.svg'),
       },
     ],
   },
@@ -24,20 +29,35 @@ export default {
       },
       {
         nombreRuta: 'introduccion',
-        icono: 'fas fa-info-circle',
+        icono: 'fas fa-info',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Ciencia de datos',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Subtema 1',
+            titulo: 'Técnicas de transformación',
             hash: 't_1_1',
+          },
+          {
+            numero: '1.2',
+            titulo: 'Modelos neuronales',
+            hash: 't_1_2',
+          },
+          {
+            numero: '1.3',
+            titulo: 'Internet de las cosas (IoT)',
+            hash: 't_1_3',
+          },
+          {
+            numero: '1.4',
+            titulo: 'Inteligencia artificial (IA)',
+            hash: 't_1_4',
           },
         ],
       },
@@ -45,13 +65,13 @@ export default {
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Herramientas colaborativas',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Normativa',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +106,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/CFA_20_122153_DU.pdf',
       },
       {
         icono: 'fas fa-download',
@@ -102,90 +122,190 @@ export default {
   },
   complementario: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      tema: 'Ciencia de datos',
+      referencia:
+        'visoalgt. (2021). <em>Obtener y Transformar Datos en Excel</em> (video). YouTube. ',
+      tipo: 'Video',
+      link: 'https://youtu.be/8JRLZKLzvxs',
+    },
+    {
+      tema: 'Ciencia de datos',
+      referencia:
+        'Comunicación Numérica. (2020).<em> Fundamentos del análisis de datos para la toma de decisiones </em>(video) YouTube',
+      tipo: 'Video',
+      link: 'https://youtu.be/qvZxvMWMvDo',
+    },
+    {
+      tema: 'Normativa',
+      referencia:
+        'Gestión & Formación. (2016).<em> Qué significa SGSST?</em> (video). YouTube. ',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=y1Kxw3-jPL0 ',
+    },
+    {
+      tema: 'Normativa',
+      referencia:
+        'Gestión & Formación. (2019). <em>Objetivos del SGSST </em>(video). YouTube. ',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=QHg-z31nKG0 ',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: 'Aprendizaje de refuerzo',
+      significado:
+        'el ordenador en su medio circundante, identifica y analiza los datos desde su conducta y comportamiento, para minimizar el riesgo de parametrizar los datos no estructurados y dar solución a tareas.',
+    },
+    {
+      termino: 'Aprendizaje no supervisado',
+      significado:
+        'los datos no están etiquetados, extrayendo información o patrones antes desconocidos.',
+    },
+    {
+      termino: 'Aprendizaje supervisado',
+      significado:
+        'los datos son etiquetados para aprender a realizar una tarea humana, es un modelo sencillo, emular el aprendizaje humano.',
+    },
+    {
+      termino: 'Herramientas colaborativas',
+      significado:
+        'el conjunto de programas usados para intercambiar, socializar o construir conocimientos, utilizando la web, sin necesidad de estar físicamente presente.',
+    },
+    {
+      termino: 'Internet de las cosas',
+      significado:
+        'se llama Internet de las cosas a todos los mecanismos, dispositivos y aplicaciones que hacen más fácil realizar las labores cotidianas, las pequeñas “cosas” con ayuda del Internet (imprescindible para su comunicación).',
+    },
+    {
+      termino: 'Mapeo de datos',
+      significado:
+        'es el proceso de selección y clasificación de los datos de acuerdo con la información, la tipología y caracterización de los datos requeridos, para su asignación final.',
+    },
+    {
+      termino: 'Muestra',
+      significado:
+        'es la cantidad mínima representativa de la población para ser estudiada.',
+    },
+    {
+      termino: 'Normativa',
+      significado:
+        'es el conjunto de normas que rigen, guían y dirigen el comportamiento del individuo, grupo de personas, corporación, actividad u objetos. ',
+    },
+    {
+      termino: 'Población',
+      significado:
+        'cantidad de individuos, animales, objetos o eventos con características similares u homogéneas que se agrupan para un estudio o análisis, la población se puede considerar infinita o finita. ',
+    },
+    {
+      termino: 'Transformación de datos',
+      significado:
+        'en este proceso se convierten datos de un formato a otro, es un proceso de conversión de estructuras que se quieren analizar. ',
     },
   ],
   referencias: [
     {
-      referencia: '',
-      link: '',
+      referencia:
+        'De Pablos Heredero, C.,  López Hermoso, J. J., Martín-Romo Romero, S. & Medina Salgado, S. (2019).<em> Organización y Transformación de los sistemas de información de la empresa.</em> Esic Editorial.',
+      link: 'https://es.calameo.com/read/000652564453af060729a',
+    },
+    {
+      referencia:
+        'Joyanes Aguilar, L. (2019). <i>Inteligencia de Negocios y Analítica de datos</i>. Alfaomega.',
+    },
+    {
+      referencia:
+        'Ladrón de Guevara, M. Á. (2020).<em> Procesadores de texto y presentaciones de información básicos.</em> Editorial Tutor Formación. ',
+    },
+    {
+      referencia:
+        'Ministerio de Salud y Protección Social. Colombia (2012). Ley 1562 de 2012. Por la cual se modifica el sistema de riesgos laborales y se dictan otras disposiciones en materia de salud ocupacional. Julio 11 de 2012. ',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila Garcia Santamaria',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Rafael Neftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Innovative Education',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Álvaro Andrés Angarita Ramirez',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Daniel Felipe Varón Molina',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }
